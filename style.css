@@ -1,0 +1,338 @@
+@font-face{
+    font-family: ArchivoBlack;
+    src: url('./fonts/ArchivoBlack-Regular.ttf');
+}
+@font-face{
+    font-family: Quattrocento;
+    src: url('./fonts/Quattrocento-Regular.ttf');
+}
+@font-face{
+    font-family: Sarabun;
+    src: url('./fonts/Sarabun-Bold.ttf');
+}
+:root{
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #2b6bb1;
+    --secondary: #c8e28c;
+    --accent: #7ac29e;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+.section{
+    width: 100vw;
+}
+.hero-img{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-image: url('./images/hero_img.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+}
+.landing-content{
+    display: grid;
+    align-items: center;
+    background: radial-gradient(ellipse at 170%, rgba(255, 255, 255, 0.5) 10%, rgba(0, 0, 0, 0.5) 90%);
+}
+.landing-text{
+    font-family: Quattrocento;
+    width: 40vw;
+    font-size: 1.3rem;
+}
+h1{
+    font-family: ArchivoBlack;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    padding: 1.2rem 0;
+}
+h2{
+    font-family: Sarabun;
+    font-size: 4rem;
+    padding: 4rem 0;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 7px;
+}
+.landing-text > .subheading{
+    color: var(--secondary);
+    font-size: 1.6rem;
+    padding-left: 0.5rem;
+}
+.action-btns a{
+    text-decoration: none;
+    margin: 2rem 1rem;
+}
+.action-btns div{
+    width: max-content;
+    color: #ffffff;
+    font-family: Sarabun;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    padding-bottom: 1.2rem;
+    border: 2px solid var(--accent);
+    margin: auto;
+}
+.full-btn{
+    background-color: var(--accent);
+    color: var(--text);
+}
+.transparent-btn:hover{
+    background-color: var(--accent);
+}
+#about-me > div p{
+    padding: 0.6rem 0;
+}
+#about-me-img{
+    height: 50vh;
+    border: black 5px solid;
+}
+#about-me a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+#achievements, #contact{
+    background-color: black;
+}
+#achievements h2, #contact h2{
+    color: #ffffff;
+}
+#achievements > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 3rem 0;
+}
+.achievement{
+    background-color: #ffffff;
+    display: grid;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem 4rem;
+    box-shadow: 0px 0px 25px var(--secondary);
+    border-radius: 1rem;
+    align-items: center;
+}
+.date{
+    font-size: 1.2rem;
+    color: #444444;
+    padding-top: 1rem;
+}
+.achievement a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--secondary);
+    margin-top: 1rem;
+}
+#dispo-container{
+    width: max-content;
+    margin: 3rem auto;
+}
+h3{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: black solid 3px;
+}
+.schedule{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    font-size: 1.5rem;
+}
+.schedule > div > div{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: black solid 3px;
+    border-top: none;
+}
+.schedule > div:nth-child(1) > div{
+    border-right: none;
+}
+#contact div{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+#contact a{
+    color: var(--secondary);
+}
+@media screen and (max-width: 600px) {
+    .header{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header .name, .header .links{display: none;}
+    #nav-burger{
+        padding: 10px 15px;
+    }
+    #nav-burger > div{
+        width: 40px;
+        border: var(--accent) 3px solid;
+        border-radius: 4px;
+        margin: 5px;
+    }
+    #nav-burger.inactive, #navigation.inactive{
+        display: none;
+    }
+    #navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vh;
+        background-color: black;
+        color: white;
+    }
+    #nav-x{
+        width: max-content;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+    #nav-x > div{
+        width: 50px;
+        border: var(--accent) 3px solid;
+        border-radius: 4px;
+    }
+    #nav-x > div:nth-child(1){
+        margin-top: 30px;
+        transform: rotate(45deg);
+    }
+    #nav-x > div:nth-child(2){
+        margin-top: -6px;
+        transform: rotate(-45deg);
+    }
+    #navigation p{
+        max-width: 95vw;
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 0.5rem 2.5vw;
+    }
+    #navigation > p:nth-child(2){
+        font-family: ArchivoBlack;
+        margin-top: 2rem;
+    }
+    #navigation > p:nth-child(3){
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    #navigation .links{
+        margin-top: 20vw;
+    }
+    #navigation .links > div{
+        width: calc(100vw - 1rem);
+        text-align: center;
+        padding: 0.5rem;
+    }
+    #navigation .links a{
+        font-size: 2rem;
+        text-decoration: none;
+        color: var(--accent);
+    }
+    #landing, .hero-img, .landing-content{
+        width: 100vw;
+        min-height: 100vh;
+        color: white;
+    }
+    .landing-content{
+        text-align: center;
+    }
+    .landing-text{
+        width: 95vw;
+        margin: auto;
+    }
+    h1{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .action-btns{
+        display: grid;
+    }
+    .action-btns a{
+        margin: 1rem;
+    }
+    #about-me, #achievements, #contact, #dispo{
+        width: 90vw;
+        padding: 0 5vw;
+        padding-bottom: 2rem;
+    }
+    h2{
+        text-align: center;
+        font-size: 2.3rem;
+        padding: 3rem 0;
+    }
+    #about-me > div{
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+    .achievement{
+        padding: 1.5rem;
+    }
+}
+@media screen and (min-width: 601px) {
+    .header{
+        background-color: var(--accent);
+        display: grid;
+        grid-template-columns: max-content 1fr 0;
+    }
+    #navigation{
+        display: none;
+    }
+    .name{
+        padding: 1.5rem 2rem;
+        font-family: ArchivoBlack;
+    }
+    .header a{
+        text-decoration: none;
+        font-size: 2rem;
+        color: var(--background);
+    }
+    .header .links{
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 3rem;
+    }
+    #landing, .hero-img, .landing-content{
+        width: 100vw;
+        min-height: 100vh;
+        color: white;
+    }
+    .landing-text{
+        padding-left: 5vw;
+    }
+    .action-btns{
+        display: flex;
+        column-gap: 2rem;
+    }
+    #about-me, #achievements, #contact, #dispo{
+        width: 80vw;
+        padding: 0 10vw;
+        padding-bottom: 4rem;
+    }
+    #about-me > div{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        column-gap: 4rem;
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+    #about-me > div p{
+        max-width: 800px;
+    }
+    #about-me a{
+        text-decoration: none;
+        color: var(--secondary);
+    }
+    .schedule > div > div{
+        padding: 0.5rem 3rem 0.5rem 1rem;
+    }
+}
